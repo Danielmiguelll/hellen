@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+    <h1 id="titulo">Posso ver estes belos pares de seios?</h1>
+    <div id="container">
+      <a href="https://www.youtube.com/watch?v=Lrle0x_DHBM&ab_channel=EarthWindandFireVEVO"><button id="sim" onclick="redirecionar()">Sim</button></a>
+        <button id="nao" onclick="mudarPosicao()">Não</button>
+    </div>
+
+    <script>
+        function redirecionar() {
+            window.location.href = 'outra_pagina.html';
+        }
+
+        function mudarPosicao() {
+            const naoButton = document.getElementById('nao');
+            const container = document.getElementById('container');
+
+            const randomX = Math.floor(Math.random() * (window.innerWidth - 200));
+            const randomY = Math.floor(Math.random() * (window.innerHeight - 100));
+
+            naoButton.style.position = 'absolute';
+            naoButton.style.left = randomX + 'px';
+            naoButton.style.top = randomY + 'px';
+        }
+    </script>
+</body>
+</html>
